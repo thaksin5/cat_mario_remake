@@ -1,0 +1,17 @@
+﻿cl : 命令列 warning D9035: 選項 'Gm' 已被取代，在未來的發行版本中將會移除
+  StdAfx.cpp
+cl : 命令列 warning D9035: 選項 'Gm' 已被取代，在未來的發行版本中將會移除
+  gamecore.cpp
+  audio.cpp
+  mygame_run.cpp
+  mygame_over.cpp
+  mygame_initialize.cpp
+  MainFrm.cpp
+  gameView.cpp
+  gameDoc.cpp
+  game.cpp
+  正在產生程式碼...
+cl : 命令列 warning D9035: 選項 'Gm' 已被取代，在未來的發行版本中將會移除
+  gameutil.cpp
+game.obj : warning LNK4075: 忽略 '/EDITANDCONTINUE'，由於 '/SAFESEH' 規格
+  game.vcxproj -> D:\ntut\oop2\catmario\cat_mario\game_testing\.\Debug\game.exe
