@@ -7,15 +7,16 @@
 #include "../Library/gamecore.h"
 #include "mygame.h"
 #include "colliders.h"
+#include "factory.h"
 #include <typeinfo>
-
 using namespace game_framework;
+
+CMovingBitmap brick;
 /////////////////////////////////////////////////////////////////////////////
 // 這個class為遊戲的遊戲執行物件，主要的遊戲程式都在這裡
 /////////////////////////////////////////////////////////////////////////////
 CGameStateRun::CGameStateRun(CGame *g) : CGameState(g)
 {
-	int s = 0;
 }
 
 CGameStateRun::~CGameStateRun()
@@ -37,7 +38,6 @@ void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 	vector<string> player_image = { "resources/image/player/player_1.bmp" , "resources/image/player/player_2.bmp" ,"resources/image/player/player_1_flip.bmp" , "resources/image/player/player_2_flip.bmp", "resources/image/player/player_jump.bmp", "resources/image/player/player_jump_flip.bmp" };
 	player = Player(0, 0, player_image);
 	MapSetting(1);
-
 }
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags) {

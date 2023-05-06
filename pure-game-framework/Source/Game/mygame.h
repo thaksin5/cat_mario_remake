@@ -77,6 +77,7 @@ namespace game_framework {
 
 	class CGameStateRun : public CGameState {
 	public:
+		CMovingBitmap brick;
 		CGameStateRun(CGame *g);
 		~CGameStateRun();
 		void OnBeginState();							// 設定每次重玩所需的變數
@@ -98,7 +99,7 @@ namespace game_framework {
 		Player player;
 		CAudio *field_music = CAudio::Instance();
 		std::vector<Brick> enemys_arr; // enemy array
-		std::vector<Brick> bricks_arr;
+		std::vector<Brick> bricks_arr; // brick
 		std::vector<CMovingBitmap> environment_arr; // environment array
 	};
 

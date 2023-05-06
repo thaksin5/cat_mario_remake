@@ -113,6 +113,9 @@
     <ClInclude Include="Source\Game\colliders.h">
       <Filter>object</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Game\factory.h">
+      <Filter>object</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Source\Core\game.rc">

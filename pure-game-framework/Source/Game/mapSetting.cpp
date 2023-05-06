@@ -7,7 +7,7 @@
 #include "../Library/gamecore.h"
 #include "mygame.h"
 #include "colliders.h"
-
+#include "factory.h"
 using namespace game_framework;
 
 void CGameStateRun::MapSetting(int map){

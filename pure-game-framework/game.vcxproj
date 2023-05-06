@@ -267,6 +267,7 @@
     <ClInclude Include="Source\Core\StdAfx.h" />
     <ClInclude Include="Source\Game\colliders.h" />
     <ClInclude Include="Source\Game\config.h" />
+    <ClInclude Include="Source\Game\factory.h" />
     <ClInclude Include="Source\Game\mygame.h" />
     <ClInclude Include="Source\Library\audio.h" />
     <ClInclude Include="Source\Library\gamecore.h" />
