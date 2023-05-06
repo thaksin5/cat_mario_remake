@@ -121,7 +121,6 @@ void Player::ani() {
 		// change image while moving
 		if ((animate_frame % 6 == 0) && (coll.GetFrameIndexOfBitmap() == 0) && (jumpSpeed == 0)) { // frame moldulus of odd number
 			coll.SetFrameIndexOfBitmap(1);
-
 		}
 		else if ((animate_frame % 6 == 0) && (coll.GetFrameIndexOfBitmap() == 1) && (jumpSpeed == 0)) {  // frame moldulus of even number 
 			coll.SetFrameIndexOfBitmap(0);

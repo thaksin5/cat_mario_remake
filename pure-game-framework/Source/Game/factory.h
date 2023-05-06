@@ -3,6 +3,7 @@
 #include "colliders.h"
 using namespace game_framework;
 
+/*
 namespace game_framework {
 	// Image factory
 	class ImageFactory {
@@ -101,3 +102,4 @@ namespace game_framework {
 		}
 	};
 }
+*/
