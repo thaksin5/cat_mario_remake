@@ -14,10 +14,11 @@ bool inRange(double num, double min, double max) {
 	return (min <= num && num <= max);
 }
 
-void CGameStateRun::Touching() {
+// brick collision
+void CGameStateRun::Touching_brick(std::vector<Brick> arr) {
 	CMovingBitmap &PC = player.coll;
 
-	for (auto &i : bricks_arr) {//player&bricks
+	for (auto &i : arr) {
 		CMovingBitmap &BC = i.coll;
 
 		if (player.jumpSpeed >= 10) {//predict penetrate
@@ -43,7 +44,7 @@ void CGameStateRun::Touching() {
 				player.jumpSpeed += 1;
 			}
 			//foot touch
-			else if (inRange(PC.GetTop() + PC.GetHeight() +1, obj_top, obj_mid_y) && PC.GetLeft() + 2 < obj_right && PC.GetLeft() + PC.GetWidth() - 2 > obj_left) {
+			else if (inRange(PC.GetTop() + PC.GetHeight() + 1, obj_top, obj_mid_y) && PC.GetLeft() + 2 < obj_right && PC.GetLeft() + PC.GetWidth() - 2 > obj_left) {
 				player.jumpSpeed = 0;
 				player.jumpBonusFrame = 0;
 				PC.SetTopLeft(PC.GetLeft(), obj_top - PC.GetHeight());
@@ -64,6 +65,6 @@ void CGameStateRun::Touching() {
 			}
 		}
 	}
-	
+
 }
 

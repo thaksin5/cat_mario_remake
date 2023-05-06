@@ -22,6 +22,7 @@ void Player::move() {
 void Player::moveHor() {
 	frame += 1;
 	if (keyRight == true) {
+
 		if (moveSpeed == 0)
 			moveSpeed += 1;
 		if (frame % 5 == 0) {//every 10 frame
@@ -82,7 +83,7 @@ void Player::ableToJump(double &ground) {
 		}
 	}
 
-	if (coll.GetTop() < ground) {// player in the air
+	if (coll.GetTop() + coll.GetHeight() < ground) {// player in the air
 		if ((coll.GetFrameIndexOfBitmap() == 0 || coll.GetFrameIndexOfBitmap() == 1) && (player_on_air == true)) {
 			coll.SetFrameIndexOfBitmap(4);
 		}
@@ -98,7 +99,7 @@ void Player::ableToJump(double &ground) {
 		jumpSpeed = -19;// v0			
 	}
 
-	if (coll.GetTop() >= ground) {// player touch on the ground
+	if (coll.GetTop() + coll.GetHeight() >= ground) {// player touch on the ground
 		player_on_air = false;
 		if (coll.GetFrameIndexOfBitmap() == 4) {
 			coll.SetFrameIndexOfBitmap(0);
@@ -110,7 +111,7 @@ void Player::ableToJump(double &ground) {
 	if (jumpBonusFrame == 5 && keyUp) {// jump hold duration (if hold long will higher)
 		jumpSpeed -= 5; // v-=5(a)
 	}
-	
+
 
 }
 void Player::ani() {
@@ -121,6 +122,7 @@ void Player::ani() {
 		// change image while moving
 		if ((animate_frame % 6 == 0) && (coll.GetFrameIndexOfBitmap() == 0) && (jumpSpeed == 0)) { // frame moldulus of odd number
 			coll.SetFrameIndexOfBitmap(1);
+
 		}
 		else if ((animate_frame % 6 == 0) && (coll.GetFrameIndexOfBitmap() == 1) && (jumpSpeed == 0)) {  // frame moldulus of even number 
 			coll.SetFrameIndexOfBitmap(0);
@@ -143,5 +145,5 @@ void Player::ani() {
 	}
 }
 void Player::voice() {
-	
+
 }

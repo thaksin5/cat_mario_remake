@@ -60,9 +60,6 @@
     <ClCompile Include="Source\Game\colliders.cpp">
       <Filter>object</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game\bricks.cpp">
-      <Filter>object</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Game\player.cpp">
       <Filter>object</Filter>
     </ClCompile>
@@ -73,6 +70,9 @@
       <Filter>object</Filter>
     </ClCompile>
     <ClCompile Include="Source\Game\eventCtrl.cpp">
+      <Filter>object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Game\block_builder.cpp">
       <Filter>object</Filter>
     </ClCompile>
   </ItemGroup>
@@ -113,7 +113,7 @@
     <ClInclude Include="Source\Game\colliders.h">
       <Filter>object</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game\factory.h">
+    <ClInclude Include="Source\Game\imageFactory.h">
       <Filter>object</Filter>
     </ClInclude>
   </ItemGroup>

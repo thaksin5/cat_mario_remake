@@ -10,7 +10,7 @@
 
 
 namespace game_framework {
-	class Collider{
+	class Collider {
 	public:
 		Collider() = default;
 		Collider(int posx, int posy, std::vector<std::string> image);
@@ -55,7 +55,7 @@ namespace game_framework {
 
 	class Brick : public Collider {
 	public:
-		Brick(){}
+		Brick() {}
 		Brick(int posx, int posy, std::vector<std::string> image) : Collider(posx, posy, image) {}
 		~Brick() = default;
 		bool _downBreak = false; //head touch -> break

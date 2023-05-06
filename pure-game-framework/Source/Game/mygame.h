@@ -77,7 +77,6 @@ namespace game_framework {
 
 	class CGameStateRun : public CGameState {
 	public:
-		CMovingBitmap brick;
 		CGameStateRun(CGame *g);
 		~CGameStateRun();
 		void OnBeginState();							// 設定每次重玩所需的變數
@@ -89,18 +88,40 @@ namespace game_framework {
 		void OnMouseMove(UINT nFlags, CPoint point);	// 處理滑鼠的動作 
 		void OnRButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 		void OnRButtonUp(UINT nFlags, CPoint point);	// 處理滑鼠的動作
-		void EventCtrl();
-		void MapSetting(int map);
-		void Touching();
+		
+		void EventCtrl(); // player interact with map
+		void MapSetting(int map); // set map
+
+		/* Collision */
+		void Touching_brick(std::vector<Brick> arr); // brick collision
+		
+		// block_builder.cpp
+		void build_block_ground(std::string block_color,int block_type,int amt, int x, int y); // build ground
+		void load_block_ground(int amount, int x_up, int y_up, int x_down, int y_down);
+
 	protected:
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
 		Player player;
 		CAudio *field_music = CAudio::Instance();
+
+		/* variable */
+		int groundX_up = 0; 
+		int groundY_up = 776;
+		int groundX_down = 0;
+		int groundY_down = 836;
+
+		/* arr */
 		std::vector<Brick> enemys_arr; // enemy array
-		std::vector<Brick> bricks_arr; // brick array
-		std::vector<CMovingBitmap> environment_arr; // environment array
+		std::vector<Brick> bricks_arr; // store all bricks
+		std::vector<Brick> upper_ground_brick_arr; // upper ground block arr
+		std::vector<Brick> lower_ground_brick_arr; // lower ground block arr
+
+		/* flag */
+
+		/* display */
+		void display_ground_brick();
 	};
 
 	/////////////////////////////////////////////////////////////////////////////

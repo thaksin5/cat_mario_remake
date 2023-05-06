@@ -7,14 +7,14 @@
 #include "../Library/gamecore.h"
 #include "mygame.h"
 #include "colliders.h"
+
 using namespace game_framework;
 
-void CGameStateRun::MapSetting(int map){
+void CGameStateRun::MapSetting(int map) {
 	if (map == 1) {
-		Brick a = Brick(0, 800, { "resources/image/object/block1/brown_brick.bmp" });
-		bricks_arr.push_back(a);
+		load_block_ground(12, groundX_up, groundY_up, groundX_down, groundY_down);
 	}
-	else if(map == 2) {
+	else if (map == 2) {
 
 	}
 	else if (map == 3) {
