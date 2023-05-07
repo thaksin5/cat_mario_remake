@@ -243,7 +243,6 @@
     <ClCompile Include="Source\Core\StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Source\Game\block_builder.cpp" />
     <ClCompile Include="Source\Game\colliders.cpp" />
     <ClCompile Include="Source\Game\eventCtrl.cpp" />
     <ClCompile Include="Source\Game\mapSetting.cpp" />
@@ -267,7 +266,7 @@
     <ClInclude Include="Source\Core\StdAfx.h" />
     <ClInclude Include="Source\Game\colliders.h" />
     <ClInclude Include="Source\Game\config.h" />
-    <ClInclude Include="Source\Game\imageFactory.h" />
+    <ClInclude Include="Source\Game\ImageFactory.h" />
     <ClInclude Include="Source\Game\mygame.h" />
     <ClInclude Include="Source\Library\audio.h" />
     <ClInclude Include="Source\Library\gamecore.h" />

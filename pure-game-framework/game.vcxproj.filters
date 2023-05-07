@@ -72,9 +72,6 @@
     <ClCompile Include="Source\Game\eventCtrl.cpp">
       <Filter>object</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Game\block_builder.cpp">
-      <Filter>object</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Library\audio.h">
@@ -113,7 +110,7 @@
     <ClInclude Include="Source\Game\colliders.h">
       <Filter>object</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Game\imageFactory.h">
+    <ClInclude Include="Source\Game\ImageFactory.h">
       <Filter>object</Filter>
     </ClInclude>
   </ItemGroup>

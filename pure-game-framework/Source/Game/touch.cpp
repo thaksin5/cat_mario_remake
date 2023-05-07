@@ -15,10 +15,10 @@ bool inRange(double num, double min, double max) {
 }
 
 // brick collision
-void CGameStateRun::Touching_brick(std::vector<Brick> arr) {
+void CGameStateRun::Touching() {
 	CMovingBitmap &PC = player.coll;
 
-	for (auto &i : arr) {
+	for (auto &i : bricks_arr) {
 		CMovingBitmap &BC = i.coll;
 
 		if (player.jumpSpeed >= 10) {//predict penetrate

@@ -55,7 +55,7 @@ namespace game_framework {
 
 	class Brick : public Collider {
 	public:
-		Brick() {}
+		Brick() = default;
 		Brick(int posx, int posy, std::vector<std::string> image) : Collider(posx, posy, image) {}
 		~Brick() = default;
 		bool _downBreak = false; //head touch -> break
@@ -64,6 +64,14 @@ namespace game_framework {
 		bool _upFall = false;
 		bool _haveItem = false;
 		std::string _item;
+	};
+
+	class Environment : public Collider {
+	public:
+		Environment() = default;
+		Environment(int posx, int posy, std::vector<std::string> image) : Collider(posx, posy, image) {}
+		~Environment() = default;
+
 	};
 }
 

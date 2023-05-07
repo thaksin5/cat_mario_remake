@@ -89,39 +89,42 @@ namespace game_framework {
 		void OnRButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 		void OnRButtonUp(UINT nFlags, CPoint point);	// 處理滑鼠的動作
 		
-		void EventCtrl(); // player interact with map
-		void MapSetting(int map); // set map
+		void EventCtrl();
 
-		/* Collision */
-		void Touching_brick(std::vector<Brick> arr); // brick collision
-		
-		// block_builder.cpp
-		void build_block_ground(std::string block_color,int block_type,int amt, int x, int y); // build ground
-		void load_block_ground(int amount, int x_up, int y_up, int x_down, int y_down);
+		// collision
+		void Touching();
 
+		// brick
+		void build_brick(std::string brick_color, int brick_type, int amt, int x, int y);
+		void build_ground(std::string brick_color, int amt, int x_Up, int y_Up, int x_Down, int y_Down);
+		// environment
+		void build_envionment(std::string name, int x, int y);
+
+		// map
+		void MapSetting(int map);
+		void shiftMapImage();
+
+		// high from ground
+		int high_from_ground(int blockCount);
+
+		// far from start
+		int far_from_start(int blockCount);
 	protected:
-		void OnMove();									// 移動遊戲元素
+		void OnMove();								// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
+		std::vector<Brick> enemys_arr; // enemy array
+		std::vector<Brick> bricks_arr; // bricks_array
+		std::vector<Environment> environment_arr; // environment array
+
 		Player player;
 		CAudio *field_music = CAudio::Instance();
 
-		/* variable */
-		int groundX_up = 0; 
+		// variable
+		int groundX_up = 0;
 		int groundY_up = 776;
 		int groundX_down = 0;
 		int groundY_down = 836;
-
-		/* arr */
-		std::vector<Brick> enemys_arr; // enemy array
-		std::vector<Brick> bricks_arr; // store all bricks
-		std::vector<Brick> upper_ground_brick_arr; // upper ground block arr
-		std::vector<Brick> lower_ground_brick_arr; // lower ground block arr
-
-		/* flag */
-
-		/* display */
-		void display_ground_brick();
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
