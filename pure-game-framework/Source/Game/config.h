@@ -14,7 +14,7 @@
 // 遊戲畫面預設的背景顏色(黑色)
 #define DEFAULT_BG_COLOR	 RGB(152, 189, 246)	
 //! 每33ms跑一次Move及Show(每秒30次)
-#define GAME_CYCLE_TIME		 15		    
+#define GAME_CYCLE_TIME		 13		    
 //! 是否在debug mode顯示cycle time
 #define SHOW_GAME_CYCLE_TIME false		
 //! 是否允許以 Ctrl-Q 暫停遊戲
@@ -30,4 +30,4 @@
 //! 全螢幕用，請設定成目前視窗的解析度 (width)。
 #define RESOLUTION_X     1920           
 //! 全螢幕用，請設定成目前視窗的解析度 (height)。
-#define RESOLUTION_Y     1080          
+#define RESOLUTION_Y     1080           
